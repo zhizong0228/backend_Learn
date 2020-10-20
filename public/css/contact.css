@@ -1,0 +1,16 @@
+.contact {
+  padding-top: 60px;
+}
+
+.contact .contact_description {
+  border: 1px solid black;
+  padding: 15px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.contact .contact_description ol {
+  padding-left: 20px;
+  margin: 0;
+}
+/*# sourceMappingURL=contact.css.map */

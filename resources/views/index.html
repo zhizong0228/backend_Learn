@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <div class="border">
+        <div class="title">
+            <h1>您的問卷調查</h1>
+        </div>
+        <div class="form_content">
+            <form action="">
+                <div class="text">
+                    這是一份不那麼重要的問卷，但還是請您用心回覆＜３
+                </div>
+                <div class="container">
+                    <div class="input_group">
+                        <div class="subtitle">姓名 | Name
+                        </div>
+                        <input type="text" placeholder="您的姓名">
+                    </div>
+                    <div class="input_group">
+                        <div class="subtitle">性別 | Gender
+                        </div>
+                        <div class="gender_select">
+                            您的性別
+                        </div>
+                        <div class="gender_options">
+                            <div class="gender_option">男性</div>
+                            <div class="gender_option">女性</div>
+                            <div class="gender_option">其他</div>
+                        </div>
+                        <input id="gender" type="hidden" name="">
+                    </div>
+                    <div class="input_group">
+                        <div class="subtitle">出生年月日 | Birthday
+                        </div>
+                        <select name="" id="year">
+                        </select>
+                        <select name="" id="">
+                            <option value="" hidden>月</option>
+                            <option value="">1</option>
+                            <option value="">2</option>
+                        </select>
+                        <select name="" id="">
+                            <option value="" hidden>日</option>
+                            <option value="">1</option>
+                            <option value="">2</option>
+                        </select>
+                    </div>
+                    <div class="input_group">
+                        <div class="subtitle">電話 | Phone
+                        </div>
+                        <input type="text" placeholder="您的電話">
+                    </div>
+                    <div class="input_group">
+                        <div class="subtitle">電子信箱 | Email
+                        </div>
+                        <input type="email" placeholder="您的信箱">
+                    </div>
+                    <div class="input_group">
+                        <label for="#pet">貓狗大戰 | Dog V.S Cat</label>
+                        <div class="radio-group">
+                            <input id="pet" type="radio" name="pet">
+                            <label>我是貓奴!!</label>
+                        </div>
+                        <div class="radio-group">
+                            <input id="pet" type="radio" name="pet">
+                            <label>我愛狗勾</label>
+                        </div>
+                        <div class="radio-group">
+                            <input id="pet" type="radio" name="pet">
+                            <label>小朋友才做選擇，我都愛!!</label>
+                        </div>
+
+                    </div>
+                    <div class="input_group">
+                        <label for="#hobby">興趣 | Hobby</label>
+                        <div class="checkboxes">
+                            <div class="checkbox-group">
+                                <input id="hobby" type="checkbox" name="hobby">
+                                <span>打球</span>
+                            </div>
+                            <div class="checkbox-group">
+                                <input id="hobby" type="checkbox" name="hobby">
+                                <span>看電影</span>
+                            </div>
+                            <div class="checkbox-group">
+                                <input id="hobby" type="checkbox" name="hobby">
+                                <span>健身</span>
+                            </div>
+                            <div class="checkbox-group">
+                                <input id="hobby" type="checkbox" name="hobby">
+                                <span>爬山</span>
+                            </div>
+                            <div class="checkbox-group">
+                                <input id="hobby" type="checkbox" name="hobby">
+                                <span>唱歌</span>
+                            </div>
+                            <div class="checkbox-group">
+                                <input id="hobby" type="checkbox" name="hobby">
+                                <span>畫圖</span>
+                            </div>
+                            <div class="checkbox-group">
+                                <input id="hobby" type="checkbox" name="hobby">
+                                <span>騎車跑山</span>
+                            </div>
+                            <div class="checkbox-group">
+                                <input id="hobby" type="checkbox" name="hobby">
+                                <span>騎單車</span>
+                            </div>
+                            <div class="checkbox-group">
+                                <input id="hobby" type="checkbox" name="hobby">
+                                <span>其他</span>
+                            </div>
+                        </div>
+                        <div class="input_group">
+                            <input id="other" type="text" name="other" placeholder="其他興趣">
+                        </div>
+                    </div>
+                    <div class="input_group">
+                        <label for="#reply">
+                            想說的話 | Reply <br>
+                            <small>滿意這份問卷嗎?說說你想說的話吧!</small>
+                        </label>
+
+                        <textarea name="reply" id="reply" rows='10' placeholder="您的回覆"></textarea>
+                    </div>
+                    <div class="buttons">
+                        <button type="submit">送出資料</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+    <script>
+        // 重複執行某段程式碼
+        var year = '<option value="" hidden>年</option>';
+
+        for (i = 2020; i >= 1990; i--) {
+            year += `<option value="">${i}</option>`
+        }
+        $('#year').html(year)
+
+
+        $('.gender_select').click(function () {
+            if ($(this).hasClass('active')) {
+                $(this).removeClass('active')
+                $('.gender_options').removeClass('active')
+            } else {
+                $(this).addClass('active')
+                $('.gender_options').addClass('active')
+            }
+        })
+
+
+        $('.gender_option').click(function(){
+            $('.gender_select').text() //沒賦值會取得文字內容
+            $('.gender_select').text($(this).text()) //賦值會取代該標籤的文字內容
+            $('#gender').val($(this).text()) // val()也和text()一樣做法
+
+            // 關閉選單
+            $('.gender_select').removeClass('active')
+            $('.gender_options').removeClass('active')
+
+            $('.gender_select').css('color','black');//Option被選擇之後把select的文字顏色變黑
+            
+        })
+
+    </script>
+</body>
+
+</html>

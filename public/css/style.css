@@ -1,0 +1,160 @@
+@charset "UTF-8";
+.body {
+  margin: 0;
+  font-family: '微軟正黑體';
+}
+
+.border {
+  width: 80%;
+  margin: auto;
+  border: 1px solid #3656e5;
+}
+
+.border .title {
+  color: white;
+  background: #3656e5;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.border .title h1 {
+  margin: 0;
+}
+
+.border .form_content {
+  width: 100%;
+}
+
+.border .form_content form .text {
+  font-size: 12px;
+  color: gray;
+  text-align: center;
+  padding: 60px 0 40px 0;
+}
+
+.border .form_content form .container {
+  width: 300px;
+  padding: 0 15px;
+  padding-bottom: 60px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: auto;
+}
+
+.border .form_content form .container .input_group {
+  width: 100%;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.border .form_content form .container .input_group .subtitle {
+  font-size: 16px;
+  color: #1a1a1a;
+  padding-bottom: 10px;
+}
+
+.border .form_content form .container .input_group input[type="text"], .border .form_content form .container .input_group input[type="email"] {
+  width: 100%;
+  padding: 5px 0;
+  padding-left: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 3px;
+  border: black 1px solid;
+}
+
+.border .form_content form .container .input_group input[type="text"]:focus, .border .form_content form .container .input_group input[type="email"]:focus {
+  border: 0;
+  outline: 2px solid #3656e5;
+}
+
+.border .form_content form .container .input_group .gender_select {
+  width: 100%;
+  padding: 5px 0;
+  padding-left: 15px;
+  font-size: 12px;
+  color: gray;
+  border-radius: 3px;
+  border: black 1px solid;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-image: url("../arrow.jpg");
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.border .form_content form .container .input_group .gender_select.active {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.border .form_content form .container .input_group .gender_options {
+  display: none;
+  position: absolute;
+  width: 100%;
+  background: white;
+  z-index: 1;
+  border: black 1px solid;
+  border-top: 0;
+  border-radius: 3px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: pointer;
+}
+
+.border .form_content form .container .input_group .gender_options.active {
+  display: block;
+}
+
+.border .form_content form .container .input_group .gender_option {
+  font-size: 14px;
+  padding: 5px 0;
+  padding-left: 15px;
+}
+
+.border .form_content form .container .input_group .gender_option:hover {
+  color: white;
+  background: #1a1a1a;
+}
+
+.border .form_content form .container .input_group .radio-group {
+  padding: 5px 0;
+}
+
+.border .form_content form .container .input_group .checkboxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.border .form_content form .container .input_group .checkboxes .checkbox-group {
+  width: 50%;
+  padding: 5px 0;
+}
+
+.border .form_content form .container .input_group textarea {
+  width: 100%;
+}
+
+.border .form_content form .container .buttons {
+  text-align: center;
+}
+
+.border .form_content form .container .buttons button[type="submit"] {
+  border: 0;
+  background-color: transparent;
+  background: #3656e5;
+  font-size: 14px;
+  color: white;
+}
+
+.border .form_content form .container .buttons button[type="submit"]:hover {
+  background: rgba(54, 86, 229, 0.8);
+}
+/*# sourceMappingURL=style.css.map */

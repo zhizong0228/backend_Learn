@@ -1,0 +1,57 @@
+.banner {
+    width:100%;
+    height:100vh;
+
+    padding-top: 56px;
+
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+
+        .swiper-silde {
+            position: relative;
+
+            img {
+                position: absolute;
+                bottom:0;
+            }
+        }
+
+        .banner-button-next,.banner-button-prev {
+            color: white;
+        }
+    }
+    
+}
+
+.news {
+    padding: 60px 0;
+
+    .news_title {
+        font-weight: bold;
+    }
+
+    .news_lists {
+        padding-top: 30px;
+
+        .news_list{
+            height: 100%;
+            padding: 15px;
+            padding-bottom: 53px;
+            border: 1px solid darkgray;
+            box-sizing: border-box;
+
+            .news_content {
+                padding: 10px 0;
+            }
+
+            .btn {
+                position: absolute;
+                bottom:15px;
+                left: calc(50% - 67px);
+            }
+        }
+
+    }
+}
+
